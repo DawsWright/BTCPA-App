@@ -3,10 +3,7 @@ TODO
 CLIENT SIDE
 
 - home page with theater info, address, etc
-- list of upcoming plays (display title + date + view details button)
-- details page for each play (title, date, time, available seats, ticket price, reserve tickets button)
-- reserve tickets pop up (first name, last name, email, numtickets text boxes) + check email to ensure no dupes
-- success page after reserving with redirect button to home page
+- check email with reservations table to ensure no dupes
 - remove play from list after date is past FOR CLIENTS
 
 EMPLOYEE SIDE
@@ -18,5 +15,6 @@ EMPLOYEE SIDE
 
 DATABASE
 
+- Employee login data with email and password (changeable)
 - (optional) remove reservations from database after date is past
 - (optional) add image attribute to event schema
