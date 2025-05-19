@@ -9,9 +9,9 @@ export const getAllEvents = async (req: Request, res: Response) => {
 };
 
 export const createEvent = async (req: Request, res: Response) => {
-  const { title, description, dateTime, totalSeats } = req.body;
+  const { title, description, dateTime, totalSeats, seatsBooked, ticketPrice, ticketsSold } = req.body;
   const event = await prisma.event.create({
-    data: { title, description, dateTime: new Date(dateTime), totalSeats },
+    data: { title, description, dateTime: new Date(dateTime), totalSeats, seatsBooked, ticketPrice, ticketsSold },
   });
   res.status(201).json(event);
 };

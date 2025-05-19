@@ -14,9 +14,12 @@ datasource db {
 }
 
 model Event {
-  id           Int           @id @default(autoincrement())
+  id           Int      @id @default(autoincrement())
   title        String
   description  String?
   dateTime     DateTime
   totalSeats   Int
+  seatsBooked  Int      @default(0)
+  ticketPrice  Decimal  @db.Decimal(10, 2)
+  ticketsSold  Int      @default(0)
 }
