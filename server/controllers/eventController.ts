@@ -15,3 +15,15 @@ export const createEvent = async (req: Request, res: Response) => {
   });
   res.status(201).json(event);
 };
+
+export const getUniqueEvent = async (req: Request, res: Response): Promise<void> => {
+  const { id } = req.params;
+  const event = await prisma.event.findUnique({
+    where: { id: parseInt(id, 10) },
+  });
+  if (!event) {
+    res.status(404).json({ error: 'Event not found' });
+    return;
+  }
+  res.json(event);
+};
