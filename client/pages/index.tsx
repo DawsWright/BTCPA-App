@@ -20,9 +20,6 @@ export default function Home() {
         See Events
       </button>
       <button className="px-4 py-2 bg-blue-500 text-white rounded">
-        Contact Us
-      </button>
-      <button className="px-4 py-2 bg-blue-500 text-white rounded">
         Employee Login
       </button>
       </div>
