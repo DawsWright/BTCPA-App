@@ -7,6 +7,8 @@ type Event = {
   description?: string;
   dateTime: string;
   totalSeats: number;
+  seatsBooked: number;
+  ticketPrice: number;
 };
 
 export default function Home() {
@@ -41,8 +43,8 @@ export default function Home() {
                 hour12: true,
               })}
             </p>
-            {event.description && <p className="mt-1">{event.description}</p>}
-            <p className="text-sm mt-1">Total Seats: {event.totalSeats}</p>
+            <p className="text-sm mt-1">Tickets Available: {event.totalSeats - event.seatsBooked}</p>
+            <p className="text-sm mt-1">Price: ${Number(event.ticketPrice).toFixed(2)}</p>
           </li>
         ))}
       </ul>
