@@ -19,3 +19,4 @@ EMPLOYEE SIDE
 DATABASE
 
 - (optional) remove reservations from database after date is past
+- (optional) add image attribute to event schema
