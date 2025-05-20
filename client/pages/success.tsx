@@ -9,7 +9,7 @@ export default function Success() {
       <h1 className="text-2xl font-bold mb-4 text-green-600">Tickets Successfully Reserved!</h1>
       <p className="mb-2">Thank you <strong>{name}</strong>!</p>
       <p className="mb-2">You've reserved <strong>{tickets}</strong> ticket(s) for <strong>{eventTitle}</strong>.</p>
-      <p className="mb-4">Amount due upon arrival: <strong>${total}</strong></p>
+      <p className="mb-4">Amount due upon arrival: <strong>${total}</strong> (cash or check only)</p>
 
       <button
         onClick={() => router.push('/')}
